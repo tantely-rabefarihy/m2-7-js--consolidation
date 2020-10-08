@@ -54,6 +54,24 @@ const favoriteDessertsGroupB = {
 
 function sortByPopularity(obj) {
   // Write code
+  let countDessert = {};
+  Object.values(obj).forEach(function (dessert) {
+    if (typeof countDessert[dessert] === "undefined") {
+      countDessert[dessert] = 1;
+    } else {
+      countDessert[dessert]++;
+    }
+  });
+
+  return Object.keys(countDessert).sort(function (dessertA, dessertB) {
+    let dessertCountA = countDessert[dessertA];
+    let dessertCountB = countDessert[dessertB];
+    if (dessertCountA < dessertCountB) {
+      return -1;
+    } else {
+      return +1;
+    }
+  });
 }
 
 // Verification via console.log()

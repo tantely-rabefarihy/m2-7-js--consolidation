@@ -82,12 +82,59 @@ const inputData = {
 
 function transformData(data) {
   // Your code here
+
+  const superpowers = [data.superpower1, data.superpower2].filter(Boolean);
+
+  let transformedData = {
+    name: data.name,
+    age: data.age,
+    status: data.status,
+    address: {
+      streetAddress: data.address1,
+      city: data.addressCity,
+      state: data.addressState,
+      country: data.addressCountry,
+    },
+    superpowers: superpowers,
+    relationships: [
+      {
+        type: "mother",
+        name: data.motherName,
+        age: data.motherAge,
+        status: data.motherStatus,
+        superpowers: [data.motherSuperpower1, data.motherSuperpower2].filter(
+          Boolean
+        ),
+      },
+      // {
+      //   type: "best friend",
+      //   name: data.bestFriendName,
+      //   age: data.bestFriendAge,
+      //   status: data.bestFriendStatus,
+      //   superpowers: [
+      //     data.bestFriendSuperpower1,
+      //     data.bestFriendSuperpower2,
+      //   ].filter(Boolean),
+      // },
+
+      {
+        type: "girlfriend",
+        name: data.girlfriendName,
+        age: data.girlfriendAge,
+        status: data.girlfriendStatus,
+        superpowers: [data.girlfriendSuperpower1, data.girlfriendSuperpower2],
+      },
+    ],
+  };
+  return transformedData;
 }
+
+console.log(transformData(inputData));
 
 // Use a console.log to verify
 // `JSON.stringify` is used to "pretty-print" the output, so that it's easy
 // to see what it looks like, and debug any problems.
-console.log(JSON.stringify(transformData(inputData), null, 2));
+// console.log(JSON.stringify(transformData(inputData), null, 2));
 
 // Test your code: "yarn test exercise-1"
 

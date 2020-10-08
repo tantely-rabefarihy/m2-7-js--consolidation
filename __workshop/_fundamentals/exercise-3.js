@@ -62,6 +62,20 @@ const favoriteDessertsGroupB = {
 
 function groupByValue(obj) {
   // do something
+
+  let groupObject = {};
+
+  Object.values(obj).forEach(function (item) {
+    groupObject[item] = [];
+  });
+
+  Object.entries(obj).forEach(function (entry) {
+    const [key, value] = entry;
+
+    groupObject[value].push(key);
+  });
+
+  return groupObject;
 }
 
 // Verification via console.log()

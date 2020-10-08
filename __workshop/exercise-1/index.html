@@ -10,7 +10,28 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
-    <!-- lots of content to add here -->
+    <header>
+      <h1 class="title">Grubhub</h1>
+      <p class="year" id="year"></p>
+    </header>
+    <nav>
+      <ul class="years">
+        <li class="year-selector">
+          <a href="#" id="btn-2018" class="button" onclick="toggleYear('2018');"
+            >2018
+          </a>
+        </li>
+        <li class="year-selector">
+          <a href="#" id="btn-2019" class="button" onclick="toggleYear('2019');"
+            >2019</a
+          >
+        </li>
+      </ul>
+      <ul id="items-list" class="items-list"></ul>
+    </nav>
+
+    <div class="food-container" id="food-container"></div>
+
     <script src="./assets/topTenList.js"></script>
     <script src="./scripts.js"></script>
   </body>

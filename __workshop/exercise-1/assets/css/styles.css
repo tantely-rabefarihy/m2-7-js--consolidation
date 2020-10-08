@@ -20,7 +20,7 @@ body {
   min-width: 320px;
 }
 
-.bacon {
+.years {
   background: var(--beau-blue);
   position: relative;
   display: flex;
@@ -30,11 +30,11 @@ body {
   z-index: 1;
 }
 
-.bivrip {
+.year-selector {
   margin: 4px;
 }
 
-.bivrip .boom {
+.year-selector .button {
   background: transparent;
   border: 3px solid var(--ksu-purple);
   padding: 14px 32px;
@@ -47,7 +47,7 @@ body {
   transition: all 0.5s;
 }
 
-.believe {
+.year {
   color: #fff;
   top: -50px;
   font-family: var(--main-font);
@@ -59,14 +59,14 @@ body {
   overflow: hidden;
 }
 
-.boom.active,
-.boom:hover {
+.button.active,
+.button:hover {
   background: var(--ksu-purple);
   border-color: transparent;
   color: white;
 }
 
-.what-now {
+.items-list {
   min-height: var(--large-band-height);
   display: flex;
   justify-content: center;
@@ -75,7 +75,7 @@ body {
   padding: 32px;
 }
 
-.that {
+.item {
   color: var(--ksu-purple);
   cursor: pointer;
   display: flex;
@@ -89,8 +89,8 @@ body {
   width: var(--number-container-size);
 }
 
-.that::before,
-.that::after {
+.item::before,
+.item::after {
   content: "";
   background: var(--lemon-yellow);
   border-radius: 50%;
@@ -103,14 +103,14 @@ body {
   left: -5px;
 }
 
-.that::after {
+.item::after {
   height: calc(var(--number-container-size) - 30px);
   width: calc(var(--number-container-size) - 30px);
   bottom: 14px;
   left: 16px;
 }
 
-.other-stuff {
+.food-container {
   flex: 1;
   background: var(--raspberry);
   overflow: hidden;
@@ -121,7 +121,7 @@ body {
   font-size: 72px;
 }
 
-.other-stuff .aaaa {
+.food-container .number {
   color: #fff;
   position: relative;
   font-size: 196px;
@@ -129,7 +129,7 @@ body {
   z-index: 1;
 }
 
-.other-stuff .aaaa::before {
+.food-container .number::before {
   content: "";
   position: absolute;
   width: 0;
@@ -142,7 +142,7 @@ body {
   transform: rotate(20deg);
 }
 
-.other-stuff .bbbb {
+.food-container .name {
   color: #fff;
   background: var(--ksu-purple);
   width: 400px;
@@ -155,11 +155,11 @@ body {
   z-index: 1;
 }
 
-.eeee {
+.placeholder {
   color: var(--melon);
 }
 
-.dddd {
+header {
   background: var(--ksu-purple);
   display: flex;
   flex-direction: column;
@@ -168,7 +168,7 @@ body {
   height: var(--small-band-height);
 }
 
-.cccc {
+.title {
   color: #fff;
   font-size: 60px;
   font-family: var(--main-font);
